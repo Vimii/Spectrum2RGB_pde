@@ -40,9 +40,9 @@ class Spectrum{
     
     xyz[0] = xyz[0]/k; xyz[1] = xyz[1]/k; xyz[2] = xyz[2]/k;
     
-    //Y = 100に正規化
-    float a = 100.f / xyz[1];
-    xyz[0] = xyz[0]*a; xyz[1] = 100.f; xyz[2] = xyz[2]*a;
+    ////Y = 100に正規化
+    //float a = 100.f / xyz[1];
+    //xyz[0] = xyz[0]*a; xyz[1] = 100.f; xyz[2] = xyz[2]*a;
     
     return xyz;
   }
@@ -62,7 +62,7 @@ static public float getWavelength(int idx) {
   return WAVELENGTH_MIN + sampleItv*idx;
 }
 
-static public float[] xyz2rgb(float[] xyz){
+static public float[] xyz2srgb(float[] xyz){
   float rgb[] = {0.f,0.f,0.f};
   
   rgb[0] = 3.2404542 * xyz[0] - 1.5371385 * xyz[1] - 0.4985314 * xyz[2];

@@ -42,12 +42,12 @@ void draw(){
   
   
   float xyz[] = input.spectram_xyz();
-  float rgb[] = xyz2rgb(xyz);
-  background(rgb[0],rgb[1],rgb[2]);
+  float srgb[] = xyz2srgb(xyz);
+  background(srgb[0],srgb[1],srgb[2]);
   push();
   textSize(30);
   text("xyz(" + xyz[0] +  "," + xyz[1] +  "," + xyz[2] + ")",10,height-30);
-  text("rgb(" + rgb[0] +  "," + rgb[1] +  "," + rgb[2] + ")",width/2+10,height-30);
+  text("rgb(" + srgb[0] +  "," + srgb[1] +  "," + srgb[2] + ")",width/2+10,height-30);
   pop();
   
   for(int i=0; i<sampleNum;i++){
