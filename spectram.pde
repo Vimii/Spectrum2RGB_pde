@@ -4,13 +4,13 @@ final static float WAVELENGTH_MAX = 830.f;
 final static float sampleItv = 10.f;
 
 
-class Spectrum {
+class Spectrum{
 
   protected float values[];
 
 
-  Spectrum() {
-    values = new float[48];
+  public Spectrum() {
+    values = new float[sampleNum];
   }
 
   public void setSpectrum(float[] data) {
@@ -46,8 +46,6 @@ class Spectrum {
     
     return xyz;
   }
-  
-  
 }
 
 //util
@@ -77,9 +75,8 @@ static public float[] xyz2rgb(float[] xyz){
 
 //Data
 
-void setD65() {
 
-  float D65_Data[] = {
+final static float D65_Data[] = {
     46.6383, 
     52.0891, 
     49.9755, 
@@ -130,9 +127,8 @@ void setD65() {
     60.3125
   };
 
-  D65 = new Spectrum();
-  D65.setSpectrum(D65_Data);
-}
+
+
 
 
 final static float cie1931_tbl[] = {
