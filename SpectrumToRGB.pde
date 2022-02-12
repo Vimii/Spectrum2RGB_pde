@@ -14,7 +14,7 @@ void setup() {
   input = new Spectrum();
   input.setSpectrum(D65_Data);
   //input.setIntensity(1.5);
-  input.multSpectrum(red_refrection);
+  //input.multSpectrum(red_refrection);
 
   //calc k
   k = 0.f;
